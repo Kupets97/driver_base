@@ -1,0 +1,15 @@
+{% extends 'body/layout.html' %}
+
+{% block title %}База водителей:{% endblock %}
+
+{% block content %}
+
+<div class="info"> 
+    <form action="/license/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+{% endblock %}

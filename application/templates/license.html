@@ -1,0 +1,22 @@
+{% extends 'body/layout.html' %}
+
+{% block title %}База водителей:{% endblock %}
+
+{% block content %}
+
+<div class="info"> 
+    <div>
+        Рейтинг: {{ raiting }}
+    </div>
+    <div>
+        <div>
+            {% for comment in comments %}
+            <div>
+                Комментарий: {{ comment.body }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
