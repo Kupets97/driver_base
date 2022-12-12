@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'comment',
     'raiting',
     'file',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [

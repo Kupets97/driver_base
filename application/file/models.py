@@ -1,12 +1,13 @@
 from django.db import models
 from django_userforeignkey.models.fields import UserForeignKey
+from django_cleanup.signals import cleanup_post_delete
 
 
 class File(models.Model):
     """ Модель файлов """
     
     file = models.FileField(
-        upload_to='uploads/'
+        upload_to='uploads/',
     )
 
     person = models.ForeignKey(
